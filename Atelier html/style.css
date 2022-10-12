@@ -1,0 +1,227 @@
+
+:root {
+    --nav-bg-color:#333;
+    --content-font-family:'Roboto', sans-serif;
+    --text-alignment:center;
+    --nav-link-bg-color:#04AA6D;
+    --margin:0;
+    --nav-padding:8px;
+    --white-color:#fff;
+    --width:100%;
+    --form-input-border:1.5px solid#868686;
+    --button-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --form-input-padding:12px 20px;
+    --form-input-margin:8px 0;
+    --form-border-radius:4px;
+  }
+
+* {
+    font-family:var(--content-font-family);
+}
+
+body {
+    margin:var(--margin);
+}
+
+.navbar {
+    background-color:var(--nav-bg-color);
+    padding:var(--nav-padding);
+    margin:var(--margin);
+    display: flex;
+}
+
+.navbar .link {
+    text-decoration: none;
+    padding:var(--nav-padding);
+    color:var(--white-color);
+}
+
+.active {
+    background-color:var(--nav-link-bg-color);
+}
+
+.link:hover {
+    background-color:var(--nav-link-bg-color);
+}
+h1{
+    text-align:var(--text-alignment);
+}
+.section_text{
+    text-align:var(--text-alignment);
+    line-height: 20px;  
+}
+.text_mark{
+    background:#f13463;
+}
+.list li{
+    list-style-type: upper-roman;
+}
+.first_section,.second_section{
+    padding:30px;
+}
+.second_section{
+    float:left;
+    width: 20%;
+    height:1000px;
+}
+.first_section{
+    float: right;
+    width: 70%;  
+}
+.form_name{
+    border:var(--form-input-border);
+    border-radius: 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    width:var(--width);
+    padding:var(--form-input-padding);
+    margin:var(--form-input-margin);
+    display: inline-block;
+    border: var(--form-input-border);
+    border-radius:var(--form-border-radius);
+    box-sizing: border-box;
+}
+
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=date],
+input[type=url],
+input[type=file],
+.drop-down_list{
+    padding:var(--form-input-padding);
+    margin:var(--form-input-margin);
+    display: inline-block;
+    border:var(--form-input-border);
+    border-radius:var(--form-border-radius);
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #04aa6dcd;
+    text-align:var(--text-alignment);
+    color:var(--white-color);
+    padding: 14px 20px;
+    margin:var(--form-input-margin);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow:var(--button-box-shadow);
+}
+
+input[type=submit]:hover {
+    background-color: #04AA6D;
+}
+
+input[type=reset] {
+    width: 30%;
+    background-color: #e80b0bd0;
+    text-align:var(--text-alignment);
+    color:var(--white-color);
+    padding: 14px 20px;
+    margin:var(--form-input-margin);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow:var(--button-box-shadow);
+}
+
+input[type=reset]:hover {
+    background-color: #e80b0b;
+}
+input:disabled{
+    color: #2a2ac9;
+}
+
+input[type=range] {
+    accent-color:#2a2ac9;
+  }
+._table {
+    border-collapse: collapse;
+    width:var(--width);
+    box-shadow: var(--button-box-shadow);
+}
+.table_header {
+    background-color: #58acd1;
+    color:var(--white-color);
+}
+
+.table_header,
+.cell {
+    text-align:left;
+    padding: 8px;
+}
+
+.row:nth-child(even) {
+    background-color: #f2f2f2
+}
+._article{
+    display: flex;
+    clear: both;
+    background: #aee0f5;
+}
+.photo{
+    width:200px;
+    height: 200px;
+    transition: width 2s, height 4s;
+}
+.photo:hover {
+    width: 300px;
+    height: 300px;
+  }
+.footer_container{
+    bottom: 0;
+    background-color:var(--nav-bg-color);
+    color:var(--white-color);
+    text-align:var(--text-alignment);
+    padding: 10px;
+    clear: both;
+}
+.sidebar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color:#aee0f5;
+    border: 2px solid #39b3e7;
+    width:200px;
+    height: 200px;
+    padding-top:50px;
+    padding-left: 50px;
+}
+.list_item{
+    list-style: none;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 800px) {
+
+    .navbar {
+        display:block;
+    }
+    .second_section{
+        float:none;
+        width: 100%;
+        height:500px;
+    }
+    .first_section{
+        float:none;
+        width: 100%;  
+    }
+    .first_section,.second_section{
+        padding:0px;
+    }
+    ._article{
+        display:block;
+        text-align: center;
+        padding: 10px;
+    }
+    .form_name{
+        padding: 10px;
+    }
+
+}
